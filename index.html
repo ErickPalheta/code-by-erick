@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erick Pahleta | Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', 'Roboto', Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-950 min-h-screen">
+    <!-- Navegação -->
+    <nav class="bg-zinc-950 z-50 shadow-lg">
+      <div class="max-w-2xl mx-auto px-6 py-4">
+        <div class="flex justify-center space-x-8">
+          <a href="index.html" class="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Home</a>
+          <a href="blog.html" class="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Blog</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Conteúdo Principal -->
+    <div class="w-full max-w-2xl mx-auto p-6 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)]">
+      <!-- GIF animado -->
+      <img src="night-shift-work.gif" alt="Night Shift Work" class="mx-auto mb-8 w-32 md:w-40 rounded-lg shadow mt-16">
+      <!-- Título -->
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Desenvolvedor Backend</h1>
+      <!-- Biografia -->
+      <p class="text-gray-300 text-base md:text-lg text-center mb-8 max-w-2xl">
+        Meu nome é <span class="font-semibold text-white">Erick Palheta</span>. Sou estudante de Ciência da Computação, focado em desenvolvimento backend e sempre buscando formas práticas de resolver problemas com código. Trabalho principalmente com <span class="font-semibold text-white">Java</span> e <span class="font-semibold text-white">Python</span>, criando sistemas, APIs REST e automatizando processos.<br><br>
+        Tenho experiência prática com <span class="font-semibold text-white">Spring Boot</span>, <span class="font-semibold text-white">Docker</span>, <span class="font-semibold text-white">MySQL</span> e uso <span class="font-semibold text-white">Git</span> no dia a dia. Também pratico algoritmos e lógica com o <span class="font-semibold text-white">LeetCode</span>, e venho aprofundando meus conhecimentos em áreas como Cloud Computing e Redes de Computadores.<br><br>
+        Já participei de projetos freelance e gosto de aprender na prática, seja com código, desafios ou quebrando a cabeça pra fazer as coisas funcionarem. Busco oportunidades pra evoluir como dev e contribuir de verdade em projetos que façam sentido.
+      </p>
+      <!-- Skills -->
+      <div class="w-full bg-zinc-900 rounded-xl p-6 mb-8 shadow-lg">
+        <h2 class="text-2xl font-semibold text-white mb-4 text-center">🛠 Skills</h2>
+        <ul class="text-gray-300 space-y-2 text-base md:text-lg list-disc list-inside">
+          <li>POO com Java</li>
+          <li>Desenvolvimento de APIs REST com Spring Boot</li>
+          <li>MySQL para modelagem e consultas de banco de dados</li>
+          <li>Controle de versão com Git e GitHub</li>
+          <li>Automação e containers com Docker</li>
+          <li>Resolução de algoritmos com LeetCode</li>
+          <li>Cloud Computing com foco em AWS</li>
+        </ul>
+      </div>
+      <!-- Projetos -->
+      <div class="w-full bg-zinc-900 rounded-xl p-6 mb-8 shadow-lg">
+        <h2 class="text-2xl font-semibold text-white mb-4 text-center">Projetos</h2>
+        <div class="space-y-4">
+          <div class="bg-blue-950/50 p-4 rounded-lg transition-all duration-300 hover:bg-blue-950/60 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+            <h3 class="text-xl font-semibold text-white mb-2">Elite Pet Company</h3>
+            <p class="text-gray-300 mb-3">Desenvolvimento de e-commerce para empresa de cosméticos pet, utilizando WordPress. Implementação de design responsivo, integração de pagamentos e otimização para SEO.</p>
+            <div class="flex gap-2">
+              <a href="https://elitepetcompany.com.br/" target="_blank" class="inline-block px-4 py-2 bg-white text-black font-semibold rounded-full shadow hover:bg-gray-200 transition">Visitar Site</a>
+            </div>
+          </div>
+          <div class="bg-blue-950/50 p-4 rounded-lg transition-all duration-300 hover:bg-blue-950/60 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+            <h3 class="text-xl font-semibold text-white mb-2">Gerador de QR Code</h3>
+            <p class="text-gray-300 mb-3">Uma aplicação Java que permite gerar QR Codes personalizados. Desenvolvido com Spring Boot e containerizado com Docker.</p>
+            <div class="flex gap-2">
+              <a href="https://github.com/ErickPalheta/qrcode-generator" target="_blank" class="inline-block px-4 py-2 bg-white text-black font-semibold rounded-full shadow hover:bg-gray-200 transition">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contato -->
+      <div class="w-full bg-zinc-900 rounded-xl p-6 shadow-lg flex flex-col items-center">
+        <h2 class="text-2xl font-semibold text-white mb-4 text-center">Contato</h2>
+        <a href="mailto:erick.palhetadp@gmail.com" class="mb-2 text-gray-300 hover:text-white transition">erick.palhetadp@gmail.com</a>
+        <a href="https://github.com/ErickPalheta" target="_blank" class="inline-block mt-2 px-6 py-2 bg-white text-black font-semibold rounded-full shadow hover:bg-gray-200 transition">GitHub</a>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
