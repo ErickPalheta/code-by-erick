@@ -17,8 +17,19 @@ function typeWriter(element, text, speed = 150) {
     }
 
     function updateText() {
-        element.childNodes[0].textContent = text.substring(0, i);
+        const normalText = "Desenvolvedor ";
+        let currentText = text.substring(0, i);
+        
+        if(i <= normalText.length){
+            // Tá digitando "Desenvolvedor"
+            element.innerHTML = currentText;
+        } else {
+            // Depois de "Desenvolvedor ", pinta o resto de azul
+            const backendPart = text.substring(normalText.length, i);
+            element.innerHTML = normalText + `<span style="color:rgb(52, 174, 214);">${backendPart}</span>`;
+        }
     }
+    
 
     function type() {
         if (!isDeleting && i < text.length) {
@@ -54,10 +65,16 @@ function typeWriter(element, text, speed = 150) {
 // Adiciona o CSS do cursor piscante
 const style = document.createElement('style');
 style.innerHTML = `
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
 }`;
 document.head.appendChild(style);
 
