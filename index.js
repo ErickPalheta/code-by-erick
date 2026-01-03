@@ -103,10 +103,32 @@ style.innerHTML = `
 }`;
 document.head.appendChild(style);
 
+// Função para esconder a tela de loading
+function hideLoadingScreen() {
+  const loadingScreen = document.getElementById('loadingScreen');
+  if (loadingScreen) {
+    // Aguarda um tempo mínimo para garantir que o conteúdo carregou
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+      // Remove o elemento do DOM após a animação
+      setTimeout(() => {
+        loadingScreen.remove();
+      }, 500);
+    }, 800); // Tempo mínimo de exibição do loading
+  }
+}
+
 // Inicializa quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializa o tema
   initTheme();
+  
+  // Esconde a tela de loading quando tudo estiver carregado
+  if (document.readyState === 'complete') {
+    hideLoadingScreen();
+  } else {
+    window.addEventListener('load', hideLoadingScreen);
+  }
   
   // Inicializa o typewriter apenas na página inicial
   const title = document.getElementById('mainTitle');
