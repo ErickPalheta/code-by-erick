@@ -1,79 +1,199 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erick Pahleta | Portfólio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        font-family: 'Inter', 'Roboto', Arial, sans-serif;
-      }
-    </style>
+    <title>Erick Palheta | Desenvolvedor Backend</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-zinc-950 min-h-screen">
+  <body>
     <!-- Navegação -->
-    <nav class="bg-zinc-950 z-50 shadow-lg">
-      <div class="max-w-2xl mx-auto px-6 py-4">
-        <div class="flex justify-center space-x-8">
-          <a href="index.html" class="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Home</a>
-          <a href="blog.html" class="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Blog</a>
-        </div>
+    <nav>
+      <div class="nav-content">
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Escuro</span>
+        </button>
       </div>
     </nav>
+
     <!-- Conteúdo Principal -->
-    <div class="w-full max-w-2xl mx-auto p-6 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)]">
-      <!-- GIF animado -->
-      <img src="night-shift-work.gif" alt="Night Shift Work" class="mx-auto mb-8 w-32 md:w-40 rounded-lg shadow mt-16">
-      <!-- Título -->
-      <h1 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Desenvolvedor Backend</h1>
-      <!-- Biografia -->
-      <p class="text-gray-300 text-base md:text-lg text-center mb-8 max-w-2xl">
-        Meu nome é <span class="font-semibold text-white">Erick Palheta</span>. Sou estudante de Ciência da Computação, focado em desenvolvimento backend e sempre buscando formas práticas de resolver problemas com código. Trabalho principalmente com <span class="font-semibold text-white">Java</span> e <span class="font-semibold text-white">Python</span>, criando sistemas, APIs REST e automatizando processos.<br><br>
-        Tenho experiência prática com <span class="font-semibold text-white">Spring Boot</span>, <span class="font-semibold text-white">Docker</span>, <span class="font-semibold text-white">MySQL</span> e uso <span class="font-semibold text-white">Git</span> no dia a dia. Também pratico algoritmos e lógica com o <span class="font-semibold text-white">LeetCode</span>, e venho aprofundando meus conhecimentos em áreas como Cloud Computing e Redes de Computadores.<br><br>
-        Já participei de projetos freelance e gosto de aprender na prática, seja com código, desafios ou quebrando a cabeça pra fazer as coisas funcionarem. Busco oportunidades pra evoluir como dev e contribuir de verdade em projetos que façam sentido.
-      </p>
-      <!-- Skills -->
-      <div class="w-full bg-zinc-900 rounded-xl p-6 mb-8 shadow-lg">
-        <h2 class="text-2xl font-semibold text-white mb-4 text-center">🛠 Skills</h2>
-        <ul class="text-gray-300 space-y-2 text-base md:text-lg list-disc list-inside">
-          <li>POO com Java</li>
-          <li>Desenvolvimento de APIs REST com Spring Boot</li>
-          <li>MySQL para modelagem e consultas de banco de dados</li>
-          <li>Controle de versão com Git e GitHub</li>
-          <li>Automação e containers com Docker</li>
-          <li>Resolução de algoritmos com LeetCode</li>
-          <li>Cloud Computing com foco em AWS</li>
-        </ul>
-      </div>
-      <!-- Projetos -->
-      <div class="w-full bg-zinc-900 rounded-xl p-6 mb-8 shadow-lg">
-        <h2 class="text-2xl font-semibold text-white mb-4 text-center">Projetos</h2>
-        <div class="space-y-4">
-          <div class="bg-blue-950/50 p-4 rounded-lg transition-all duration-300 hover:bg-blue-950/60 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-            <h3 class="text-xl font-semibold text-white mb-2">Elite Pet Company</h3>
-            <p class="text-gray-300 mb-3">Desenvolvimento de e-commerce para empresa de cosméticos pet, utilizando WordPress. Implementação de design responsivo, integração de pagamentos e otimização para SEO.</p>
-            <div class="flex gap-2">
-              <a href="https://elitepetcompany.com.br/" target="_blank" class="inline-block px-4 py-2 bg-white text-black font-semibold rounded-full shadow hover:bg-gray-200 transition">Visitar Site</a>
+    <div class="container fade-in">
+      <!-- Introdução com Foto -->
+      <section class="intro-section">
+        <div class="intro-content">
+          <div class="photo-container">
+            <div class="photo-placeholder">
+              <span class="photo-icon">📷</span>
+              <span class="photo-text">Foto em breve</span>
             </div>
+            <!-- Quando tiver a foto, descomente e adicione o caminho:
+            <img src="foto.jpg" alt="Erick Palheta" class="profile-photo" />
+            -->
           </div>
-          <div class="bg-blue-950/50 p-4 rounded-lg transition-all duration-300 hover:bg-blue-950/60 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-            <h3 class="text-xl font-semibold text-white mb-2">Gerador de QR Code</h3>
-            <p class="text-gray-300 mb-3">Uma aplicação Java que permite gerar QR Codes personalizados. Desenvolvido com Spring Boot e containerizado com Docker.</p>
-            <div class="flex gap-2">
-              <a href="https://github.com/ErickPalheta/qrcode-generator" target="_blank" class="inline-block px-4 py-2 bg-white text-black font-semibold rounded-full shadow hover:bg-gray-200 transition">Ver no GitHub</a>
+          <div class="intro-text">
+            <h1 id="mainTitle">Erick Palheta</h1>
+            <p class="intro-subtitle">Desenvolvedor Backend</p>
+            <p class="intro-description">
+              Estudante de Ciência da Computação e desenvolvedor backend com foco em Java, Python e Spring Boot 
+              para criação de sistemas e APIs REST. Tenho experiência prática com MySQL, PostgreSQL, Git e GitHub, 
+              e desenvolvo soluções backend executadas em servidores Linux (Ubuntu Server, Debian), utilizando 
+              Proxmox e ferramentas de monitoramento como Zabbix e Grafana.
+            </p>
+            <div class="hero-badges">
+              <span class="badge">☕ Java & Spring Boot</span>
+              <span class="badge">🐍 Python</span>
+              <span class="badge">☁️ AWS</span>
+              <span class="badge">🐧 Linux</span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Sobre -->
+      <section id="sobre" class="card">
+        <h2>Sobre</h2>
+        <p>
+          Sou estudante de <span class="highlight">Ciência da Computação</span> e desenvolvedor backend com foco em 
+          <span class="highlight">Java</span>, <span class="highlight">Python</span> e <span class="highlight">Spring Boot</span> 
+          para criação de sistemas e APIs REST.
+        </p>
+        <p>
+          Tenho experiência prática com <span class="highlight">MySQL</span>, <span class="highlight">PostgreSQL</span>, 
+          <span class="highlight">Git</span> e <span class="highlight">GitHub</span>, e desenvolvo soluções backend executadas 
+          em servidores <span class="highlight">Linux</span> (Ubuntu Server, Debian), utilizando 
+          <span class="highlight">Proxmox</span> e ferramentas de monitoramento como <span class="highlight">Zabbix</span> e 
+          <span class="highlight">Grafana</span>. Também possuo conhecimentos em redes de computadores e 
+          <span class="highlight">Cloud Computing (AWS)</span>.
+        </p>
+        <p>
+          Atualmente, aprimoro minhas habilidades em algoritmos e lógica no <span class="highlight">LeetCode</span> e busco 
+          oportunidades para evoluir como desenvolvedor backend em projetos que demandem qualidade e desempenho.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section class="card">
+        <h2>🛠️ Skills</h2>
+        
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Backend Development</h3>
+            <ul class="skills-list">
+              <li>Java (POO)</li>
+              <li>Spring Boot</li>
+              <li>Python</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>APIs REST</h3>
+            <ul class="skills-list">
+              <li>Design e implementação</li>
+              <li>Arquitetura de APIs</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Bancos de Dados</h3>
+            <ul class="skills-list">
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>Modelagem e consultas</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Infra e Redes</h3>
+            <ul class="skills-list">
+              <li>Proxmox</li>
+              <li>Linux (Ubuntu Server, Debian)</li>
+              <li>Zabbix</li>
+              <li>Grafana</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Versionamento</h3>
+            <ul class="skills-list">
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Cloud Computing</h3>
+            <ul class="skills-list">
+              <li>AWS (em evolução)</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Algoritmos e Lógica</h3>
+            <ul class="skills-list">
+              <li>LeetCode</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projetos -->
+      <section class="card">
+        <h2>Projetos</h2>
+        
+        <div class="project-card">
+          <h3>Elite Pet Company</h3>
+          <p>
+            Desenvolvimento de e-commerce para empresa de cosméticos pet, utilizando WordPress. 
+            Implementação de design responsivo, integração de pagamentos e otimização para SEO.
+          </p>
+          <div class="project-tags">
+            <span class="tag">WordPress</span>
+            <span class="tag">E-commerce</span>
+            <span class="tag">SEO</span>
+          </div>
+          <a href="https://elitepetcompany.com.br/" target="_blank" class="btn">Visitar Site</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Gerador de QR Code</h3>
+          <p>
+            Uma aplicação Java que permite gerar QR Codes personalizados. 
+            Desenvolvido com Spring Boot e containerizado com Docker.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="https://github.com/ErickPalheta/qrcode-generator" target="_blank" class="btn">Ver no GitHub</a>
+        </div>
+      </section>
+
       <!-- Contato -->
-      <div class="w-full bg-zinc-900 rounded-xl p-6 shadow-lg flex flex-col items-center">
-        <h2 class="text-2xl font-semibold text-white mb-4 text-center">Contato</h2>
-        <a href="mailto:erick.palhetadp@gmail.com" class="mb-2 text-gray-300 hover:text-white transition">erick.palhetadp@gmail.com</a>
-        <a href="https://github.com/ErickPalheta" target="_blank" class="inline-block mt-2 px-6 py-2 bg-white text-black font-semibold rounded-full shadow hover:bg-gray-200 transition">GitHub</a>
-      </div>
+      <section id="contato" class="card contact-section">
+        <h2>Contato</h2>
+        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+          Vamos conversar sobre desenvolvimento backend, projetos ou oportunidades?
+        </p>
+        <div class="contact-info">
+          <a href="mailto:erick.palhetadp@gmail.com" class="contact-link">
+            📧 erick.palhetadp@gmail.com
+          </a>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/ErickPalheta" target="_blank" class="btn btn-secondary">GitHub</a>
+        </div>
+      </section>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>
