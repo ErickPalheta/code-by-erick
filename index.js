@@ -118,10 +118,113 @@ function hideLoadingScreen() {
   }
 }
 
+// ─── Terminal "Sobre mim" ───────────────────────────────
+function initTerminal() {
+  const body = document.getElementById('terminalBody');
+  if (!body) return;
+
+  const PROMPT =
+    '<span class="t-user">erick</span>' +
+    '<span class="t-at">@</span>' +
+    '<span class="t-host">portfolio</span>' +
+    '<span class="t-colon">:</span>' +
+    '<span class="t-path">~</span>' +
+    '<span class="t-dollar">$</span>';
+
+  const steps = [
+    { type: 'cmd',    text: 'whoami' },
+    { type: 'out',    html: '<span class="t-hl">Erick Palheta</span> <span class="t-dim">—</span> Desenvolvedor Backend' },
+    { type: 'gap' },
+
+    { type: 'cmd',    text: 'cat sobre.txt' },
+    { type: 'out',    html: 'Sou estudante de <span class="t-hl">Ciência da Computação</span> e desenvolvedor\nbackend com foco em <span class="t-hl">Java</span>, <span class="t-hl">Python</span> e <span class="t-hl">Spring Boot</span>\npara criação de sistemas e <span class="t-hl">APIs REST</span>.' },
+    { type: 'out',    html: '\nTenho experiência com <span class="t-hl">MySQL</span>, <span class="t-hl">PostgreSQL</span>, <span class="t-hl">Git</span> e <span class="t-hl">GitHub</span>,\ne desenvolvo soluções em servidores <span class="t-hl">Linux</span> (Ubuntu Server, Debian),\nutilizando <span class="t-hl">Proxmox</span>, <span class="t-hl">Zabbix</span>, <span class="t-hl">Grafana</span> e <span class="t-hl">Cloud AWS</span>.\nTambém possuo conhecimentos em redes de computadores.' },
+    { type: 'gap' },
+
+    { type: 'cmd',    text: 'echo $STATUS' },
+    { type: 'out',    html: 'Aprimorando algoritmos no <span class="t-hl">LeetCode</span> | Buscando oportunidades 🚀' },
+    { type: 'gap' },
+
+    { type: 'cursor' },
+  ];
+
+  function addPromptLine() {
+    const div = document.createElement('div');
+    div.className = 't-line';
+    div.innerHTML = PROMPT;
+    body.appendChild(div);
+    return div;
+  }
+
+  function typeCmd(line, text, cb) {
+    const span = document.createElement('span');
+    span.className = 't-cmd';
+    const cur = document.createElement('span');
+    cur.className = 't-cursor';
+    line.appendChild(span);
+    line.appendChild(cur);
+
+    let i = 0;
+    function tick() {
+      if (i < text.length) {
+        span.textContent += text[i++];
+        setTimeout(tick, 55 + Math.random() * 35);
+      } else {
+        cur.remove();
+        if (cb) setTimeout(cb, 180);
+      }
+    }
+    tick();
+  }
+
+  function addOut(html) {
+    const div = document.createElement('div');
+    div.className = 't-output';
+    div.innerHTML = html;
+    body.appendChild(div);
+  }
+
+  function run(i) {
+    if (i >= steps.length) return;
+    const s = steps[i];
+    const next = () => run(i + 1);
+
+    if (s.type === 'cmd') {
+      typeCmd(addPromptLine(), s.text, next);
+    } else if (s.type === 'out') {
+      addOut(s.html);
+      setTimeout(next, 60);
+    } else if (s.type === 'gap') {
+      const div = document.createElement('div');
+      div.style.height = '0.4rem';
+      body.appendChild(div);
+      setTimeout(next, 30);
+    } else if (s.type === 'cursor') {
+      const line = addPromptLine();
+      const cur = document.createElement('span');
+      cur.className = 't-cursor';
+      line.appendChild(cur);
+    }
+  }
+
+  // Inicia quando a seção entrar na viewport
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      observer.disconnect();
+      setTimeout(() => run(0), 300);
+    }
+  }, { threshold: 0.25 });
+
+  observer.observe(body);
+}
+
 // Inicializa quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializa o tema
   initTheme();
+
+  // Inicializa o terminal "Sobre mim"
+  initTerminal();
   
   // Esconde a tela de loading quando tudo estiver carregado
   if (document.readyState === 'complete') {
