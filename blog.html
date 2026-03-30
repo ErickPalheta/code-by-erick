@@ -10,9 +10,12 @@
     <!-- Navegação -->
     <nav>
       <div class="nav-content">
+        <a href="index.html" class="nav-brand">Erick Palheta</a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
           <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
           <span id="themeIcon">🌙</span>
@@ -21,17 +24,77 @@
       </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
     <div class="container fade-in">
-      <div style="text-align: center; margin: 3rem 0;">
+
+      <!-- Cabeçalho do Blog -->
+      <div class="blog-header">
         <h1>Blog</h1>
+        <p class="blog-subtitle">Reflexões sobre engenharia de software, backend e tecnologia.</p>
       </div>
 
-      <div class="card">
-        <p style="text-align: center; color: var(--text-muted);">
-          Em breve, novos conteúdos serão adicionados aqui!
-        </p>
-      </div>
+      <!-- Post -->
+      <article class="section-card blog-post">
+        <div class="post-meta">
+          <span class="post-tag">Backend</span>
+          <span class="post-tag">Arquitetura</span>
+          <span class="post-date">2025</span>
+        </div>
+
+        <h2 class="post-title">Otimização de sistemas voltou a ser uma prioridade ⚙️</h2>
+
+        <div class="post-body">
+          <p>
+            Com os altos preços de memória RAM e infraestrutura, um tema que ficou em segundo plano
+            por alguns anos está voltando para o centro das discussões: <strong>otimização de sistemas</strong>.
+          </p>
+
+          <p>
+            Durante muito tempo, a abordagem mais comum era escalar recursos. Mais memória, mais instâncias,
+            mais consumo. Esse modelo funcionou enquanto o custo não era um problema relevante.
+            Hoje, esse cenário mudou.
+          </p>
+
+          <p>
+            Na prática, isso força uma mudança de postura dos desenvolvedores.
+            Volta a ser necessário pensar melhor no uso de cache, como se fazia em outros momentos
+            da engenharia de software.
+          </p>
+
+          <div class="post-highlight">
+            <span class="post-highlight-icon">🗄️</span>
+            <p>
+              Cache definido com critério, dados realmente necessários em memória, TTL bem planejado,
+              invalidação correta e menos abstrações pesadas apenas por conveniência. Decisões que antes
+              eram ignoradas agora têm impacto direto no <strong>custo</strong> e na <strong>escalabilidade</strong> do sistema.
+            </p>
+          </div>
+
+          <div class="post-highlight">
+            <span class="post-highlight-icon">🏗️</span>
+            <p>
+              Arquiteturas que tratam memória como recurso ilimitado tendem a se tornar caras e difíceis
+              de sustentar. Já sistemas que utilizam cache e memória de forma consciente costumam escalar
+              melhor, ter comportamento mais previsível e gerar menos custo operacional.
+            </p>
+          </div>
+
+          <p>
+            O contexto atual reforça algo que sempre foi verdade:
+            boas decisões técnicas fazem diferença não só na performance, mas também no negócio.
+          </p>
+        </div>
+
+        <div class="post-footer">
+          <a href="https://www.linkedin.com/in/dev-erickpalheta/" target="_blank" class="btn btn-secondary">
+            Ver no LinkedIn
+          </a>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <p>Feito com ♥ por Erick Palheta · 2025</p>
+      </footer>
+
     </div>
 
     <script src="index.js"></script>
