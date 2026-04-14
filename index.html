@@ -38,11 +38,15 @@
 
       <!-- Hero Section -->
       <section class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="hero-bracket hero-bracket-left" aria-hidden="true">{</div>
+        <div class="hero-bracket hero-bracket-right" aria-hidden="true">}</div>
         <div class="hero-content">
-          <div class="photo-container">
+          <div class="hero-photo-side">
             <img src="foto.jpg.jpeg" alt="Erick Palheta" class="profile-photo" />
           </div>
-          <div class="hero-text">
+          <div class="hero-text-side">
+            <span class="code-tag">&lt;developer&gt;</span>
             <h1 id="mainTitle">Erick Palheta</h1>
             <p class="hero-role">Desenvolvedor Backend</p>
             <p class="hero-description">
@@ -60,81 +64,86 @@
               <span class="tech-pill">AWS</span>
               <span class="tech-pill">Linux</span>
             </div>
+            <span class="code-tag">&lt;/developer&gt;</span>
           </div>
         </div>
       </section>
 
-      <!-- Sobre — Terminal -->
-      <section id="sobre" class="section-card terminal-card">
-        <div class="terminal-header">
-          <div class="terminal-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-          </div>
-          <span class="terminal-title">bash — erick@portfolio:~</span>
-          <div class="terminal-header-spacer"></div>
-        </div>
-        <div class="terminal-body" id="terminalBody"></div>
-      </section>
+      <!-- Grid: Terminal + Skills lado a lado -->
+      <div class="content-grid">
 
-      <!-- Skills -->
-      <section class="section-card">
-        <div class="section-header">
-          <h2>Skills & Tecnologias</h2>
-          <div class="section-line"></div>
-        </div>
+        <!-- Sobre — Terminal -->
+        <section id="sobre" class="section-card terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">bash — erick@portfolio:~</span>
+            <div class="terminal-header-spacer"></div>
+          </div>
+          <div class="terminal-body" id="terminalBody"></div>
+        </section>
 
-        <div class="skills-table">
-          <div class="skills-row">
-            <div class="skills-label">Backend</div>
-            <div class="skills-items">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>Python</span>
-              <span>POO</span>
+        <!-- Skills -->
+        <section class="section-card">
+          <div class="section-header">
+            <h2>Skills & Tecnologias</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="skills-table">
+            <div class="skills-row">
+              <div class="skills-label">Backend</div>
+              <div class="skills-items">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Python</span>
+                <span>POO</span>
+              </div>
+            </div>
+            <div class="skills-row">
+              <div class="skills-label">APIs REST</div>
+              <div class="skills-items">
+                <span>Design e implementação</span>
+                <span>Arquitetura de APIs</span>
+              </div>
+            </div>
+            <div class="skills-row">
+              <div class="skills-label">Bancos de Dados</div>
+              <div class="skills-items">
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+            <div class="skills-row">
+              <div class="skills-label">Infra & Redes</div>
+              <div class="skills-items">
+                <span>Linux</span>
+                <span>Proxmox</span>
+                <span>Zabbix</span>
+                <span>Grafana</span>
+              </div>
+            </div>
+            <div class="skills-row">
+              <div class="skills-label">Cloud & DevOps</div>
+              <div class="skills-items">
+                <span>AWS</span>
+                <span>Docker</span>
+              </div>
+            </div>
+            <div class="skills-row">
+              <div class="skills-label">Versionamento</div>
+              <div class="skills-items">
+                <span>Git</span>
+                <span>GitHub</span>
+              </div>
             </div>
           </div>
-          <div class="skills-row">
-            <div class="skills-label">APIs REST</div>
-            <div class="skills-items">
-              <span>Design e implementação</span>
-              <span>Arquitetura de APIs</span>
-            </div>
-          </div>
-          <div class="skills-row">
-            <div class="skills-label">Bancos de Dados</div>
-            <div class="skills-items">
-              <span>MySQL</span>
-              <span>PostgreSQL</span>
-              <span>Modelagem e consultas</span>
-            </div>
-          </div>
-          <div class="skills-row">
-            <div class="skills-label">Infra & Redes</div>
-            <div class="skills-items">
-              <span>Linux</span>
-              <span>Proxmox</span>
-              <span>Zabbix</span>
-              <span>Grafana</span>
-            </div>
-          </div>
-          <div class="skills-row">
-            <div class="skills-label">Cloud & DevOps</div>
-            <div class="skills-items">
-              <span>AWS</span>
-              <span>Docker</span>
-            </div>
-          </div>
-          <div class="skills-row">
-            <div class="skills-label">Versionamento</div>
-            <div class="skills-items">
-              <span>Git</span>
-              <span>GitHub</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+      </div>
 
       <!-- Projetos -->
       <section class="section-card">
@@ -184,6 +193,103 @@
         </div>
       </section>
 
+      <!-- Ferramentas & Ambiente -->
+      <section class="section-card">
+        <div class="section-header">
+          <h2>Ferramentas & Ambiente</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="tools-subtitle">Tecnologias e ferramentas que utilizo no dia a dia para desenvolvimento, infraestrutura e monitoramento.</p>
+
+        <div class="tools-grid">
+
+          <div class="tool-card" style="--tool-color: #ED8B00">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="tool-icon" />
+            <span class="tool-name">Java</span>
+            <span class="tool-cat">Linguagem</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #6DB33F">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" class="tool-icon" />
+            <span class="tool-name">Spring Boot</span>
+            <span class="tool-cat">Framework</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #3776AB">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="tool-icon" />
+            <span class="tool-name">Python</span>
+            <span class="tool-cat">Linguagem</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #FCC624">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" class="tool-icon" />
+            <span class="tool-name">Linux</span>
+            <span class="tool-cat">Sistema Operacional</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #E57000">
+            <img src="https://cdn.simpleicons.org/proxmox/E57000" alt="Proxmox" class="tool-icon" />
+            <span class="tool-name">Proxmox</span>
+            <span class="tool-cat">Virtualização</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #D40000">
+            <div class="tool-icon-text" style="background: #D40000">Z</div>
+            <span class="tool-name">Zabbix</span>
+            <span class="tool-cat">Monitoramento</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #F46800">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana" class="tool-icon" />
+            <span class="tool-name">Grafana</span>
+            <span class="tool-cat">Observabilidade</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #2496ED">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" class="tool-icon" />
+            <span class="tool-name">Docker</span>
+            <span class="tool-cat">Containers</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #4479A1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" class="tool-icon" />
+            <span class="tool-name">MySQL</span>
+            <span class="tool-cat">Banco de Dados</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #4169E1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tool-icon" />
+            <span class="tool-name">PostgreSQL</span>
+            <span class="tool-cat">Banco de Dados</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #FF9900">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="tool-icon" />
+            <span class="tool-name">AWS</span>
+            <span class="tool-cat">Cloud</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #007ACC">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon" />
+            <span class="tool-name">VS Code</span>
+            <span class="tool-cat">Editor</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #F05032">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="tool-icon" />
+            <span class="tool-name">Git</span>
+            <span class="tool-cat">Versionamento</span>
+          </div>
+
+          <div class="tool-card" style="--tool-color: #6e7681">
+            <img src="https://cdn.simpleicons.org/github/8585a0" alt="GitHub" class="tool-icon" />
+            <span class="tool-name">GitHub</span>
+            <span class="tool-cat">Repositório</span>
+          </div>
+
+        </div>
+      </section>
+
       <!-- Contato -->
       <section id="contato" class="section-card contact-section">
         <div class="section-header">
@@ -201,7 +307,7 @@
       </section>
 
       <footer class="footer">
-        <p>Developed by Erick  Palheta · 2025</p>
+        <p>Developed by Erick Palheta · 2025</p>
       </footer>
 
     </div>
