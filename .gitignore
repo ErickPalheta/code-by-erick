@@ -1,0 +1,7 @@
+# Claude Code (local)
+.claude/
+install.cmd
+
+# Sistema
+Thumbs.db
+.DS_Store
