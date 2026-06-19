@@ -2,6 +2,9 @@
 .claude/
 install.cmd
 
+# Export bruto do Claude Design (runtime proprietário)
+Portilio/
+
 # Sistema
 Thumbs.db
 .DS_Store

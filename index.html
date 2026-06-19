@@ -1,317 +1,264 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erick Palheta | Desenvolvedor Backend</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Tela de Loading -->
-    <div class="loading-screen" id="loadingScreen">
-      <div class="loading-content">
-        <div class="loading-spinner"></div>
-        <p class="loading-text">Carregando...</p>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erick Palheta | Desenvolvedor Backend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top" style="position: relative;">
+  <div aria-hidden="true" style="position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden;">
+    <div style="position: absolute; top: -20%; left: -10%; width: 75vw; height: 75vw; background: radial-gradient(circle, rgba(255,255,255,0.045) 0%, transparent 60%); filter: blur(40px); animation: fogDrift 26s ease-in-out infinite; will-change: transform;"></div>
+    <div style="position: absolute; bottom: -25%; right: -15%; width: 80vw; height: 80vw; background: radial-gradient(circle, rgba(255,255,255,0.035) 0%, transparent 60%); filter: blur(40px); animation: fogDrift2 32s ease-in-out infinite; will-change: transform;"></div>
+  </div>
+  <div aria-hidden="true" style="position: fixed; inset: 0; pointer-events: none; z-index: 91; opacity: 0.5; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22/><feColorMatrix type=%22matrix%22 values=%220 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0%22/></filter><rect width=%22240%22 height=%22240%22 filter=%22url(%23n)%22/></svg>'); animation: grainShift .9s steps(4) infinite;"></div>
+  <div aria-hidden="true" style="position: fixed; inset: 0; pointer-events: none; z-index: 89; background: radial-gradient(ellipse 80% 70% at 50% 45%, transparent 0%, transparent 52%, rgba(0,0,0,0.35) 78%, rgba(0,0,0,0.7) 100%);"></div>
+
+  <div class="corner-label" style="position: fixed; z-index: 95; top: 30px; left: 30px; animation: fadeUp .9s ease .3s forwards;">
+    <p role="heading" aria-level="2" style="font-family: 'Syne', sans-serif; font-size: 12.5px; letter-spacing: 0.16em; font-weight: 600; line-height: 1.5; text-transform: uppercase; color: rgba(236,236,236,0.85);">Engenheiro de Software<br>Backend // System Designer</p>
+  </div>
+  <a href="blog.html" class="lnk-blog" style="position: fixed; z-index: 95; top: 30px; right: 30px; font-family: 'Syne', sans-serif; font-size: 11px; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; color: rgba(236,236,236,0.55); text-decoration: none; animation: fadeUp .9s ease .45s forwards; transition: color .3s ease;">Blog ↗</a>
+  <div class="social-rail" style="position: fixed; left: 30px; top: 50%; transform: translateY(-50%); z-index: 95; display: flex; flex-direction: column; gap: 34px; animation: fadeIn 1.2s ease .8s forwards;">
+    <a href="https://github.com/ErickPalheta" target="_blank" rel="noopener" aria-label="GitHub" class="social-ico" style="display: block; opacity: 0.6; mix-blend-mode: screen; transition: opacity .3s ease, transform .3s ease;"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" style="width: 23px; height: 23px; display: block;"></a>
+    <a href="https://www.linkedin.com/in/dev-erickpalheta/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-ico" style="display: block; opacity: 0.6; mix-blend-mode: screen; transition: opacity .3s ease, transform .3s ease;"><svg viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: #ffffff; display: block;" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
+    <a href="mailto:erick.palhetadp@gmail.com" aria-label="E-mail" class="social-ico" style="display: block; opacity: 0.6; mix-blend-mode: screen; transition: opacity .3s ease, transform .3s ease;"><svg viewBox="0 0 24 24" style="width: 23px; height: 23px; fill: none; stroke: #ffffff; stroke-width: 1.6; display: block;" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"></rect><path d="M3 6l9 7 9-7"></path></svg></a>
+  </div>
+  <footer class="corner-footer" style="position: fixed; z-index: 95; text-align: right; bottom: 30px; right: 30px; animation: fadeUp .9s ease .6s forwards;">
+    <p style="font-family: 'Syne', sans-serif; font-size: 12.5px; letter-spacing: 0.16em; font-weight: 500; line-height: 1.55; text-transform: uppercase; color: rgba(236,236,236,0.6);">Erick Palheta<br>Desenvolvedor Backend<br>©2026 Portfolio</p>
+  </footer>
+
+  <header style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2;">
+    <div style="text-align: center; padding: 0 24px;">
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: rgba(236,236,236,0.45); margin-bottom: 34px; animation: fadeUp 1s ease .9s forwards;">// portfolio_2026</p>
+      <h1 aria-label="Erick Palheta" style="font-family: 'Syne', sans-serif; font-size: clamp(42px, 7vw, 96px); font-weight: 800; line-height: 0.96; letter-spacing: -0.02em; text-transform: uppercase; color: #f4f4f4; text-shadow: 0 0 28px rgba(255,255,255,0.30), 0 0 90px rgba(255,255,255,0.14); margin-bottom: 38px;">
+        <span style="display: block; overflow: hidden;"><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .15s forwards;">E</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .22s forwards;">R</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .29s forwards;">I</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .36s forwards;">C</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .43s forwards;">K</span></span>
+        <span style="display: block; overflow: hidden;"><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .50s forwards;">P</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .57s forwards;">A</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .64s forwards;">L</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .71s forwards;">H</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .78s forwards;">E</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .85s forwards;">T</span><span aria-hidden="true" style="display: inline-block; animation: letterIn .8s cubic-bezier(.16,1,.3,1) .92s forwards;">A</span></span>
+      </h1>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 18px; animation: fadeUp 1s ease 1.35s forwards;">
+        <p style="font-family: 'Syne', sans-serif; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(236,236,236,0.55); display: flex; align-items: center; gap: 12px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #ffffff; animation: pulseDot 2.4s ease infinite;"></span>Backend Developer</p>
+        <a href="#sobre" class="btn-glass" style="font-family: 'Syne', sans-serif; display: inline-flex; align-items: center; gap: 12px; padding: 15px 38px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.1); color: #ffffff; font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; text-decoration: none; background: rgba(255,255,255,0.04); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 0 40px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(255,255,255,0.06); transition: background .3s ease, box-shadow .3s ease, transform .3s ease;">Liberar acesso <span style="font-size: 14px;">→</span></a>
       </div>
     </div>
-
-    <!-- Navegação -->
-    <nav>
-      <div class="nav-content">
-        <a href="index.html" class="nav-brand">Erick Palheta</a>
-        <ul class="nav-links">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-          <span id="themeIcon">🌙</span>
-          <span id="themeText">Escuro</span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Conteúdo Principal -->
-    <div class="container fade-in">
-
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-glow"></div>
-        <div class="hero-bracket hero-bracket-left" aria-hidden="true">{</div>
-        <div class="hero-bracket hero-bracket-right" aria-hidden="true">}</div>
-        <div class="hero-content">
-          <div class="hero-photo-side">
-            <img src="foto.jpg.jpeg" alt="Erick Palheta" class="profile-photo" />
-          </div>
-          <div class="hero-text-side">
-            <span class="code-tag">&lt;developer&gt;</span>
-            <h1 id="mainTitle">Erick Palheta</h1>
-            <p class="hero-role">Desenvolvedor Backend</p>
-            <p class="hero-description">
-              Backend Developer e Engenheiro de Software. Especialista em lógica de algoritmos, estruturas de dados.
-            </p>
-            <div class="hero-actions">
-              <a href="mailto:erick.palhetadp@gmail.com" class="btn">Entrar em contato</a>
-              <a href="https://github.com/ErickPalheta" target="_blank" class="btn btn-secondary">GitHub</a>
-              <a href="https://www.linkedin.com/in/dev-erickpalheta/" target="_blank" class="btn btn-secondary">LinkedIn</a>
-            </div>
-            <div class="tech-stack-hero">
-              <span class="tech-pill">Java</span>
-              <span class="tech-pill">Spring Boot</span>
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">AWS</span>
-              <span class="tech-pill">Linux</span>
-            </div>
-            <span class="code-tag">&lt;/developer&gt;</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Grid: Terminal + Skills lado a lado -->
-      <div class="content-grid">
-
-        <!-- Sobre — Terminal -->
-        <section id="sobre" class="section-card terminal-card">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
-            </div>
-            <span class="terminal-title">bash — erick@portfolio:~</span>
-            <div class="terminal-header-spacer"></div>
-          </div>
-          <div class="terminal-body" id="terminalBody"></div>
-        </section>
-
-        <!-- Skills -->
-        <section class="section-card">
-          <div class="section-header">
-            <h2>Skills & Tecnologias</h2>
-            <div class="section-line"></div>
-          </div>
-
-          <div class="skills-table">
-            <div class="skills-row">
-              <div class="skills-label">Backend</div>
-              <div class="skills-items">
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>Python</span>
-                <span>POO</span>
-              </div>
-            </div>
-            <div class="skills-row">
-              <div class="skills-label">APIs REST</div>
-              <div class="skills-items">
-                <span>Design e implementação</span>
-                <span>Arquitetura de APIs</span>
-              </div>
-            </div>
-            <div class="skills-row">
-              <div class="skills-label">Bancos de Dados</div>
-              <div class="skills-items">
-                <span>MySQL</span>
-                <span>PostgreSQL</span>
-              </div>
-            </div>
-            <div class="skills-row">
-              <div class="skills-label">Infra & Redes</div>
-              <div class="skills-items">
-                <span>Linux</span>
-                <span>Proxmox</span>
-                <span>Zabbix</span>
-                <span>Grafana</span>
-              </div>
-            </div>
-            <div class="skills-row">
-              <div class="skills-label">Cloud & DevOps</div>
-              <div class="skills-items">
-                <span>AWS</span>
-                <span>Docker</span>
-              </div>
-            </div>
-            <div class="skills-row">
-              <div class="skills-label">Versionamento</div>
-              <div class="skills-items">
-                <span>Git</span>
-                <span>GitHub</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-
-      <!-- Projetos -->
-      <section class="section-card">
-        <div class="section-header">
-          <h2>Projetos</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-card-header">
-              <h3>Elite Pet Company</h3>
-              <span class="project-status">Live</span>
-            </div>
-            <p>
-              Desenvolvimento de e-commerce para empresa de cosméticos pet, utilizando WordPress.
-              Implementação de design responsivo, integração de pagamentos e otimização para SEO.
-            </p>
-            <div class="project-tags">
-              <span class="tag">WordPress</span>
-              <span class="tag">E-commerce</span>
-              <span class="tag">SEO</span>
-            </div>
-            <div class="project-links">
-              <a href="https://elitepetcompany.com.br/" target="_blank" class="btn">Visitar Site</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-card-header">
-              <h3>Gerador de QR Code</h3>
-              <span class="project-status open-source">Open Source</span>
-            </div>
-            <p>
-              Uma aplicação Java que permite gerar QR Codes personalizados.
-              Desenvolvido com Spring Boot e containerizado com Docker.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Java</span>
-              <span class="tag">Spring Boot</span>
-              <span class="tag">Docker</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ErickPalheta/qrcode-generator" target="_blank" class="btn btn-secondary">Ver no GitHub</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Ferramentas & Ambiente -->
-      <section class="section-card">
-        <div class="section-header">
-          <h2>Ferramentas & Ambiente</h2>
-          <div class="section-line"></div>
-        </div>
-        <p class="tools-subtitle">Tecnologias e ferramentas que utilizo no dia a dia para desenvolvimento, infraestrutura e monitoramento.</p>
-
-        <div class="tools-grid">
-
-          <div class="tool-card" style="--tool-color: #ED8B00">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="tool-icon" />
-            <span class="tool-name">Java</span>
-            <span class="tool-cat">Linguagem</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #6DB33F">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" class="tool-icon" />
-            <span class="tool-name">Spring Boot</span>
-            <span class="tool-cat">Framework</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #3776AB">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="tool-icon" />
-            <span class="tool-name">Python</span>
-            <span class="tool-cat">Linguagem</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #FCC624">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" class="tool-icon" />
-            <span class="tool-name">Linux</span>
-            <span class="tool-cat">Sistema Operacional</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #E57000">
-            <img src="https://cdn.simpleicons.org/proxmox/E57000" alt="Proxmox" class="tool-icon" />
-            <span class="tool-name">Proxmox</span>
-            <span class="tool-cat">Virtualização</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #D40000">
-            <div class="tool-icon-text" style="background: #D40000">Z</div>
-            <span class="tool-name">Zabbix</span>
-            <span class="tool-cat">Monitoramento</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #F46800">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana" class="tool-icon" />
-            <span class="tool-name">Grafana</span>
-            <span class="tool-cat">Observabilidade</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #2496ED">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" class="tool-icon" />
-            <span class="tool-name">Docker</span>
-            <span class="tool-cat">Containers</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #4479A1">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" class="tool-icon" />
-            <span class="tool-name">MySQL</span>
-            <span class="tool-cat">Banco de Dados</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #4169E1">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tool-icon" />
-            <span class="tool-name">PostgreSQL</span>
-            <span class="tool-cat">Banco de Dados</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #FF9900">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="tool-icon" />
-            <span class="tool-name">AWS</span>
-            <span class="tool-cat">Cloud</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #007ACC">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon" />
-            <span class="tool-name">VS Code</span>
-            <span class="tool-cat">Editor</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #F05032">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="tool-icon" />
-            <span class="tool-name">Git</span>
-            <span class="tool-cat">Versionamento</span>
-          </div>
-
-          <div class="tool-card" style="--tool-color: #6e7681">
-            <img src="https://cdn.simpleicons.org/github/8585a0" alt="GitHub" class="tool-icon" />
-            <span class="tool-name">GitHub</span>
-            <span class="tool-cat">Repositório</span>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Contato -->
-      <section id="contato" class="section-card contact-section">
-        <div class="section-header">
-          <h2>Contato</h2>
-          <div class="section-line"></div>
-        </div>
-        <p class="contact-description">
-          Vamos conversar sobre desenvolvimento backend, projetos ou oportunidades?
-        </p>
-        <div class="contact-links">
-          <a href="mailto:erick.palhetadp@gmail.com" class="btn">📧 erick.palhetadp@gmail.com</a>
-          <a href="https://github.com/ErickPalheta" target="_blank" class="btn btn-secondary">GitHub</a>
-          <a href="https://www.linkedin.com/in/dev-erickpalheta/" target="_blank" class="btn btn-secondary">LinkedIn</a>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <p>Developed by Erick Palheta · 2025</p>
-      </footer>
-
+    <div aria-hidden="true" style="position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; animation: fadeIn 1s ease 2s forwards;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(236,236,236,0.35);">scroll</span>
+      <div style="width: 20px; height: 32px; border: 1px solid rgba(255,255,255,0.18); border-radius: 11px; display: flex; justify-content: center; padding-top: 6px;"><div style="width: 2.5px; height: 7px; border-radius: 3px; background: rgba(255,255,255,0.6); animation: scrollHint 1.8s ease infinite;"></div></div>
     </div>
+  </header>
 
-    <script src="index.js"></script>
-  </body>
+  <main style="position: relative; z-index: 2;">
+    <section id="sobre" style="scroll-margin-top: 40px; max-width: 1060px; margin: 0 auto; padding: 130px 28px 0;">
+      <div data-reveal="0" style="display: flex; align-items: center; gap: 22px; margin-bottom: 50px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.3em; color: rgba(236,236,236,0.4);">01 // SOBRE</span>
+        <div style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.14), transparent);"></div>
+      </div>
+      <div data-reveal="120" class="term-card" style="background: rgba(8,8,8,0.85); border: 1px solid #1d1d1d; border-radius: 10px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 70px rgba(255,255,255,0.025); backdrop-filter: blur(6px); transition: border-color .35s ease;">
+        <div style="background: #0d0d0d; padding: 12px 18px; display: flex; align-items: center; gap: 14px; border-bottom: 1px solid #1d1d1d;">
+          <div style="display: flex; gap: 7px; flex-shrink: 0;">
+            <span class="term-dot" style="width: 11px; height: 11px; border-radius: 50%; background: #2c2c2c; transition: background .3s ease;"></span>
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #2c2c2c;"></span>
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #2c2c2c;"></span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5a5a5a; flex: 1; text-align: center; letter-spacing: 0.06em;">bash — erick@portfolio:~</span>
+          <div style="width: 47px; flex-shrink: 0;"></div>
+        </div>
+        <div style="display: flex; align-items: stretch; gap: clamp(16px, 3vw, 40px); padding: 26px 30px 34px; min-height: 430px;">
+          <div id="terminal" style="flex: 1; min-width: 0; font-family: 'JetBrains Mono', monospace; font-size: 13.5px; line-height: 1.95; color: #c9d1d9; overflow: hidden;"></div>
+          <div id="termLogo" aria-hidden="true" style="flex-shrink: 0; width: clamp(78px, 13vw, 132px); display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0.9); transition: opacity 2.4s ease, transform 2.4s cubic-bezier(.16,1,.3,1); pointer-events: none;">
+            <img src="https://cdn.simpleicons.org/debian/A81D33" alt="Debian" style="width: 100%; height: auto; filter: drop-shadow(0 0 20px rgba(168,29,51,0.45));">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stacks" style="max-width: 1060px; margin: 0 auto; padding: 150px 28px 0;">
+      <div data-reveal="0" style="display: flex; align-items: center; gap: 22px; margin-bottom: 24px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.3em; color: rgba(236,236,236,0.4);">02 // STACKS</span>
+        <div style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.14), transparent);"></div>
+      </div>
+      <p data-reveal="40" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #6a6a6a; margin-bottom: 18px; max-width: 560px; line-height: 1.85;">Stack organizada por área de atuação.</p>
+      <div style="display: flex; flex-direction: column;">
+        <div data-reveal="80" class="stack-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 24px 40px; align-items: baseline; padding: 30px 10px; border-top: 1px solid #1a1a1a; transition: padding-left .45s cubic-bezier(.16,1,.3,1), background .45s ease;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e5e5e;">Backend</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px;">
+            <span class="stk" data-clr="#ED8B00" data-glow="rgba(237,139,0,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Java</span>
+            <span class="stk" data-clr="#6DB33F" data-glow="rgba(109,179,63,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Spring Boot</span>
+            <span class="stk" data-clr="#4B8BBE" data-glow="rgba(75,139,190,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Python</span>
+            <span class="stk" data-clr="#cfcfcf" data-glow="rgba(255,255,255,0.28)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">POO</span>
+          </div>
+        </div>
+        <div data-reveal="140" class="stack-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 24px 40px; align-items: baseline; padding: 30px 10px; border-top: 1px solid #1a1a1a; transition: padding-left .45s cubic-bezier(.16,1,.3,1), background .45s ease;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e5e5e;">APIs REST</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px;">
+            <span class="stk" data-clr="#cfcfcf" data-glow="rgba(255,255,255,0.28)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Design de APIs</span>
+            <span class="stk" data-clr="#cfcfcf" data-glow="rgba(255,255,255,0.28)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Arquitetura</span>
+          </div>
+        </div>
+        <div data-reveal="200" class="stack-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 24px 40px; align-items: baseline; padding: 30px 10px; border-top: 1px solid #1a1a1a; transition: padding-left .45s cubic-bezier(.16,1,.3,1), background .45s ease;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e5e5e;">Bancos de Dados</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px;">
+            <span class="stk" data-clr="#5e94c4" data-glow="rgba(94,148,196,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">MySQL</span>
+            <span class="stk" data-clr="#699eca" data-glow="rgba(105,158,202,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">PostgreSQL</span>
+          </div>
+        </div>
+        <div data-reveal="260" class="stack-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 24px 40px; align-items: baseline; padding: 30px 10px; border-top: 1px solid #1a1a1a; transition: padding-left .45s cubic-bezier(.16,1,.3,1), background .45s ease;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e5e5e;">Infra &amp; Redes</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px;">
+            <span class="stk" data-clr="#FCC624" data-glow="rgba(252,198,36,0.35)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Linux</span>
+            <span class="stk" data-clr="#E57000" data-glow="rgba(229,112,0,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Proxmox</span>
+            <span class="stk" data-clr="#e63232" data-glow="rgba(230,50,50,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Zabbix</span>
+            <span class="stk" data-clr="#F46800" data-glow="rgba(244,104,0,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Grafana</span>
+          </div>
+        </div>
+        <div data-reveal="320" class="stack-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 24px 40px; align-items: baseline; padding: 30px 10px; border-top: 1px solid #1a1a1a; transition: padding-left .45s cubic-bezier(.16,1,.3,1), background .45s ease;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e5e5e;">Cloud &amp; DevOps</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px;">
+            <span class="stk" data-clr="#FF9900" data-glow="rgba(255,153,0,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">AWS</span>
+            <span class="stk" data-clr="#2496ED" data-glow="rgba(36,150,237,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Docker</span>
+          </div>
+        </div>
+        <div data-reveal="380" class="stack-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 24px 40px; align-items: baseline; padding: 30px 10px; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; transition: padding-left .45s cubic-bezier(.16,1,.3,1), background .45s ease;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e5e5e;">Versionamento</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px;">
+            <span class="stk" data-clr="#F05032" data-glow="rgba(240,80,50,0.4)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">Git</span>
+            <span class="stk" data-clr="#ffffff" data-glow="rgba(255,255,255,0.3)" style="font-family: 'Syne', sans-serif; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: #d4d4d4; transition: color .5s ease, text-shadow .5s ease;">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" style="max-width: 1060px; margin: 0 auto; padding: 150px 28px 0;">
+      <div data-reveal="0" style="display: flex; align-items: center; gap: 22px; margin-bottom: 50px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.3em; color: rgba(236,236,236,0.4);">03 // PROJETOS</span>
+        <div style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.14), transparent);"></div>
+      </div>
+      <div data-reveal="80" style="border-top: 1px solid #1a1a1a;">
+        <a href="https://elitepetcompany.com.br/" target="_blank" rel="noopener" class="project-link" style="display: flex; align-items: flex-start; gap: clamp(20px, 4vw, 56px); flex-wrap: wrap; padding: 52px 12px; border-bottom: 1px solid #1a1a1a; text-decoration: none; transition: padding-left .5s cubic-bezier(.16,1,.3,1), background .5s ease;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.24em; color: #4a4a4a; padding-top: 12px;">P.01</span>
+          <div style="flex: 1; min-width: 270px;">
+            <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px;">
+              <h3 style="font-family: 'Syne', sans-serif; font-size: clamp(26px, 3.4vw, 42px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; color: #f0f0f0; text-shadow: 0 0 30px rgba(255,255,255,0.14);">Elite Pet Company</h3>
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-size: 10px; padding: 5px 14px; border-radius: 100px; color: #ffffff; border: 1px solid rgba(255,255,255,0.22); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #ffffff; animation: pulseDot 2.2s ease infinite;"></span>Live</span>
+            </div>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8c8c8c; line-height: 1.85; max-width: 560px; margin-bottom: 16px; text-wrap: pretty;">Desenvolvimento de e-commerce para empresa de cosméticos pet, utilizando WordPress. Implementação de design responsivo, integração de pagamentos e otimização para SEO.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #555555;">WordPress · E-commerce · SEO</p>
+          </div>
+          <span style="font-family: 'Syne', sans-serif; font-size: 11.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff; display: inline-flex; align-items: center; gap: 10px; padding-top: 14px; white-space: nowrap;">Visitar site <span style="font-size: 15px;">→</span></span>
+        </a>
+        <a href="https://github.com/ErickPalheta/qrcode-generator" target="_blank" rel="noopener" class="project-link" style="position: relative; display: flex; align-items: flex-start; gap: clamp(20px, 4vw, 56px); flex-wrap: wrap; padding: 52px 12px; border-bottom: 1px solid #1a1a1a; text-decoration: none; overflow: hidden; transition: padding-left .5s cubic-bezier(.16,1,.3,1), background .5s ease;">
+          <img src="qr-illustration.png" alt="" aria-hidden="true" style="position: absolute; top: 50%; right: clamp(8px, 5vw, 70px); transform: translateY(-50%); width: clamp(140px, 16vw, 200px); height: auto; opacity: 0.4; pointer-events: none; z-index: 0;">
+          <span style="position: relative; z-index: 1; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.24em; color: #4a4a4a; padding-top: 12px;">P.02</span>
+          <div style="position: relative; z-index: 1; flex: 1; min-width: 270px;">
+            <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px;">
+              <h3 style="font-family: 'Syne', sans-serif; font-size: clamp(26px, 3.4vw, 42px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; color: #f0f0f0; text-shadow: 0 0 30px rgba(255,255,255,0.14);">Gerador de QR Code</h3>
+              <span style="font-family: 'Syne', sans-serif; font-size: 10px; padding: 5px 14px; border-radius: 100px; color: #8c8c8c; border: 1px solid #262626; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">Open Source</span>
+            </div>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8c8c8c; line-height: 1.85; max-width: 560px; margin-bottom: 16px; text-wrap: pretty;">Uma aplicação Java que permite gerar QR Codes personalizados. Desenvolvido com Spring Boot e containerizado com Docker.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #555555;">Java · Spring Boot · Docker</p>
+          </div>
+          <span style="position: relative; z-index: 1; font-family: 'Syne', sans-serif; font-size: 11.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff; display: inline-flex; align-items: center; gap: 10px; padding-top: 14px; white-space: nowrap;">Ver no GitHub <span style="font-size: 15px;">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="ferramentas" style="max-width: 1060px; margin: 0 auto; padding: 150px 28px 0;">
+      <div data-reveal="0" style="display: flex; align-items: center; gap: 22px; margin-bottom: 20px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.3em; color: rgba(236,236,236,0.4);">04 // FERRAMENTAS &amp; AMBIENTE</span>
+        <div style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.14), transparent);"></div>
+      </div>
+      <p data-reveal="60" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #6a6a6a; margin-bottom: 44px; max-width: 560px; line-height: 1.85; text-wrap: pretty;">Tecnologias e ferramentas que utilizo no dia a dia para desenvolvimento, infraestrutura e monitoramento.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(146px, 1fr)); gap: 12px;">
+        <div data-reveal="100" class="tool-card" style="--hb: rgba(237,139,0,0.55); --hg: rgba(237,139,0,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Java</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Linguagem</span>
+        </div>
+        <div data-reveal="140" class="tool-card" style="--hb: rgba(109,179,63,0.55); --hg: rgba(109,179,63,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Spring Boot</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Framework</span>
+        </div>
+        <div data-reveal="180" class="tool-card" style="--hb: rgba(55,118,171,0.55); --hg: rgba(55,118,171,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Python</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Linguagem</span>
+        </div>
+        <div data-reveal="220" class="tool-card" style="--hb: rgba(252,198,36,0.55); --hg: rgba(252,198,36,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Linux</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Sistema</span>
+        </div>
+        <div data-reveal="260" class="tool-card" style="--hb: rgba(229,112,0,0.55); --hg: rgba(229,112,0,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.simpleicons.org/proxmox/E57000" alt="Proxmox" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Proxmox</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Virtualização</span>
+        </div>
+        <div data-reveal="300" class="tool-card" style="--hb: rgba(212,0,0,0.55); --hg: rgba(212,0,0,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <div style="width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 17px; color: #ffffff; background: #D40000;">Z</div>
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Zabbix</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Monitoramento</span>
+        </div>
+        <div data-reveal="340" class="tool-card" style="--hb: rgba(244,104,0,0.55); --hg: rgba(244,104,0,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Grafana</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Observabilidade</span>
+        </div>
+        <div data-reveal="380" class="tool-card" style="--hb: rgba(36,150,237,0.55); --hg: rgba(36,150,237,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Docker</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Containers</span>
+        </div>
+        <div data-reveal="420" class="tool-card" style="--hb: rgba(68,121,161,0.55); --hg: rgba(68,121,161,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">MySQL</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Banco de Dados</span>
+        </div>
+        <div data-reveal="460" class="tool-card" style="--hb: rgba(65,105,225,0.55); --hg: rgba(65,105,225,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">PostgreSQL</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Banco de Dados</span>
+        </div>
+        <div data-reveal="500" class="tool-card" style="--hb: rgba(255,153,0,0.55); --hg: rgba(255,153,0,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">AWS</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Cloud</span>
+        </div>
+        <div data-reveal="540" class="tool-card" style="--hb: rgba(0,122,204,0.55); --hg: rgba(0,122,204,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">VS Code</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Editor</span>
+        </div>
+        <div data-reveal="580" class="tool-card" style="--hb: rgba(240,80,50,0.55); --hg: rgba(240,80,50,0.12); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">Git</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Versionamento</span>
+        </div>
+        <div data-reveal="620" class="tool-card" style="--hb: rgba(255,255,255,0.35); --hg: rgba(255,255,255,0.07); border-radius: 14px; padding: 28px 12px 22px; display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; border: 1px solid transparent; transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease;">
+          <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" style="width: 40px; height: 40px; object-fit: contain;">
+          <span style="font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8;">GitHub</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #555555; text-transform: uppercase; letter-spacing: 0.16em;">Repositório</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" style="position: relative; min-height: 88vh; display: flex; align-items: center; justify-content: center; padding: 150px 28px 120px; text-align: center;">
+      <div style="max-width: 760px;">
+        <p data-reveal="0" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: rgba(236,236,236,0.4); margin-bottom: 28px;">05 // CONTATO</p>
+        <h2 data-reveal="100" style="font-family: 'Syne', sans-serif; font-size: clamp(38px, 6.5vw, 78px); font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; text-transform: uppercase; color: #f4f4f4; text-shadow: 0 0 28px rgba(255,255,255,0.25), 0 0 90px rgba(255,255,255,0.1); margin-bottom: 26px;">Vamos<br>conversar?</h2>
+        <p data-reveal="180" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8c8c8c; line-height: 1.85; margin-bottom: 44px; text-wrap: pretty;">Sobre desenvolvimento backend, projetos ou oportunidades.</p>
+        <div data-reveal="260" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="mailto:erick.palhetadp@gmail.com" class="btn-glass" style="font-family: 'Syne', sans-serif; display: inline-flex; align-items: center; gap: 12px; padding: 16px 36px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.1); color: #ffffff; font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; text-decoration: none; background: rgba(255,255,255,0.04); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 0 40px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(255,255,255,0.06); transition: background .3s ease, box-shadow .3s ease, transform .3s ease;">erick.palhetadp@gmail.com →</a>
+          <a href="https://github.com/ErickPalheta" target="_blank" rel="noopener" class="btn-outline" style="font-family: 'Syne', sans-serif; display: inline-flex; align-items: center; padding: 16px 30px; border-radius: 3px; border: 1px solid #232323; color: #8c8c8c; font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; text-decoration: none; transition: border-color .3s ease, color .3s ease, transform .3s ease;">GitHub</a>
+          <a href="https://www.linkedin.com/in/dev-erickpalheta/" target="_blank" rel="noopener" class="btn-outline" style="font-family: 'Syne', sans-serif; display: inline-flex; align-items: center; padding: 16px 30px; border-radius: 3px; border: 1px solid #232323; color: #8c8c8c; font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; text-decoration: none; transition: border-color .3s ease, color .3s ease, transform .3s ease;">LinkedIn</a>
+        </div>
+        <p data-reveal="340" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #4a4a4a; margin-top: 90px;">Developed by Erick Palheta — ©2026</p>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="index.js"></script>
+</body>
 </html>
